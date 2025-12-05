@@ -1,0 +1,37 @@
+# Voice Assistant Configuration
+# ================================
+
+# Audio Configuration
+audio:
+  sample_rate: 16000          # Audio sample rate in Hz
+  chunk_samples: 1280         # Number of samples per chunk
+  device_index: null          # null = default device, or set specific device index
+
+# Wake Word Configuration
+wake_word:
+  model_name: hey_jarvis      # Name of the wake word model
+  threshold: 0.5              # Detection threshold (0.0-1.0)
+  cooldown_seconds: 4.0       # Cooldown period after detection
+  buffer_clear_chunks: 15     # Number of chunks to clear from buffer
+
+# Speech Recognition Configuration
+speech_recognition:
+  model_language: de          # Language model (de = German)
+  silence_timeout: 2.0        # Seconds of silence to end recording
+  max_record_time: 30         # Maximum recording duration in seconds
+
+# Text-to-Speech Configuration
+text_to_speech:
+  voice: de-DE-KatjaNeural    # Voice identifier (Azure format)
+  engine: edge                # TTS engine (edge = Microsoft Edge TTS)
+
+# Logging Configuration
+logging:
+  level: INFO                 # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  file: voice_assistant.log   # Log file path
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+# Command Configuration
+commands:
+  enable_web_search: true     # Enable web search commands
+  enable_system_commands: true # Enable system command execution (calc, notepad, etc.)
