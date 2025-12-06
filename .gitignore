@@ -13,10 +13,26 @@ __pycache__/
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Project specific
+voice_assistant.log
+temp_speech.mp3
+*.lnk
+*.ico
+*.bat
+
+# Old/Legacy Code (kept for reference but not tracked)
+voice_assistant_edge*.py
+voice_assistant_final.py
+voice_assistant_tts.py
+voice_assistant.py
+listen*.py
 
 # Audio/Model files (optional - können groß sein)
 *.wav
